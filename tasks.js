@@ -29,7 +29,7 @@ function displayTasks(db){
   let choice2 = input.question("Which task do you wish to select?");
   
                         
-if(Number(choice2) <= keys.length){db.get(choice2).then(keys => {console.log(keys);
+db.get(choice2).then(keys => {console.log(keys);
                              let nme = keys[0];
                              let desc = keys[1];
                              let time = keys[2];
@@ -44,16 +44,12 @@ choice3 = Number(choice3);
                               }
                               else if (choice3 === 3){
                              db.delete(choice2);
-                             mainMenu(db);
+                             
                               }
                              
                              
-                             });}
-else{console.log("Out of range!")}
-
-/*finally{
-  mainMenu(db);
-}  */                         
+                             });
+console.log("Out of range!")                      
                           
                            }); 
   
