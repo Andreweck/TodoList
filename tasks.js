@@ -1,10 +1,6 @@
 const input = require('readline-sync');
 const Database = require("@replit/database");
 
-
-
-const mainMenu= require("./index.js");
-
 class Task{
   constructor(id, name, description, timeAdded, isComplete, timeCompleted){
     this.id = id;

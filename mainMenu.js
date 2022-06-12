@@ -1,9 +1,6 @@
 const input = require('readline-sync');
 const Database = require("@replit/database");
-//const task = require("./tasks.js");
 const { Task, addTask, displayTasks } = require('./tasks.js');
-//const mainMenu = require('./index.js')
-
 
 function mainMenu(db){
 
@@ -38,5 +35,10 @@ else if(choice1 === "2"){
   
 
 }
+  else if(choice1 == "3"){
+    db.empty();
+  }
 }
+
+
 module.exports = mainMenu;
