@@ -25,10 +25,10 @@ function addTask(db){
   
 }
 function displayTasks(db){
-  db.getAll().then(keys => {console.log(keys)
+  db.getAll().then(kys => {console.log(kys); db.list().then(keys => {console.log(keys.length)
   let choice2 = input.question("Which task do you wish to select?");
-  
-                        
+  let intrusiveint1 = Number(choice2);
+if (intrusiveint1 >= keys.length){
 db.get(choice2).then(keys => {console.log(keys);
                              let nme = keys[0];
                              let desc = keys[1];
@@ -49,9 +49,10 @@ choice3 = Number(choice3);
                              
                              
                              });
-console.log("Out of range!")                      
+                           }
+else{console.log("Out of range!")}                      
                           
-                           }); 
+                           })}); 
   
 }
 module.exports = {Task: Task,
